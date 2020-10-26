@@ -118,9 +118,14 @@ var startQuiz = function () {
 var isCorrect;
 var chooseAnswer = function (e) {
 
+    console.log(e);
+    if(e.target.innerText!="Wrong !"){
+
+    
+
     if (nextQ <= questions.length) {
 
-        if (isCorrect) {
+            if (isCorrect) {
            
             questionChoice.removeChild(isCorrect);
         }
@@ -207,6 +212,8 @@ var chooseAnswer = function (e) {
         highScores(); }
     }
     nextQ++;
+
+}
 
 }
 
