@@ -296,6 +296,9 @@ function scoreDisplay(){
 
 body.addEventListener("submit",function(e){
     e.preventDefault();
+
+
+    if(e.target.nodeName=="FORM"){
    
     var scoresTable=[{name:input.value,score:score}];
      storedScores=JSON.parse(localStorage.getItem("highScores")); 
@@ -311,7 +314,7 @@ body.addEventListener("submit",function(e){
     storedScores = JSON.parse(localStorage.getItem("highScores")); 
    
     
-    scoreDisplay();
+    scoreDisplay();}
  
 })
 
