@@ -237,7 +237,7 @@ function displayGobackAndClearScore(){
    goBack.addEventListener("click", function(e){
     e.preventDefault();
        
-        window.location.href = "file:///C:/Users/hhutk_dr318k4/OneDrive/Desktop/working-files/week5/04-Web-APIs/02-Homework/index.html";
+        window.location.href = "https://hhutku.github.io/code-quiz/";
    
    });
 
