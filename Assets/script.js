@@ -10,8 +10,8 @@ var body=document.querySelector("body");
 var listener=document.querySelector(".listener");
 var containerHighScores=document.querySelector(".containerHighScores");
 
-// if(localStorage.getItem("highestScore")){
-//   highestScore.textContent="High Score : " +localStorage.getItem("highestScore");}
+if(localStorage.getItem("highestScore")){
+  highestScore.textContent="High Score : " +localStorage.getItem("highestScore");}
 
 var nextQ = 0;
 var timer;
@@ -311,8 +311,7 @@ if(i<5){
         
          localStorage.setItem("highestScore",storedScores[0].score);
 
-         if(localStorage.getItem("highestScore")){
-            highestScore.textContent="High Score : " +localStorage.getItem("highestScore");}
+        
          
     }
 
