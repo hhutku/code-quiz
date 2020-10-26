@@ -119,7 +119,12 @@ var isCorrect;
 var chooseAnswer = function (e) {
 
     console.log(e);
-    if(e.target.innerText!="Wrong !"){
+    console.log(e.target.dataset);
+
+    if( (e.target.innerText!="Wrong !" && e.target.innerText!="Correct !" && e.target.className!="question"))
+    // if( (e.target.dataset!="isCorrect" && e.target.className!="question"))
+    // if(e.target.dataset)
+    {
 
     
 
@@ -132,17 +137,18 @@ var chooseAnswer = function (e) {
 
         if (e.target.outerText == questions[nextQ - 1].correctAnswer) {
 
-            isCorrect = document.createElement('h3');
+            isCorrect = document.createElement('div');
             questionChoice.appendChild(isCorrect);
-            isCorrect.setAttribute("style", "border-top: 2px solid rgb(158, 62, 62);color:rgb(158, 62, 62);margin-top:30px;padding:10px;font-size:20px");
+            isCorrect.setAttribute("style", "border-top: 2px solid rgb(158, 62, 62);color:rgb(158, 62, 62);margin-top:0px;padding:10px;font-size:20px");
             isCorrect.textContent = "Correct !";
+            isCorrect.setAttribute("data-set","isCorrect");
            
 
         } else {
-            isCorrect = document.createElement('h3');
+            isCorrect = document.createElement('div');
             questionChoice.appendChild(isCorrect);
-            isCorrect.setAttribute("style", "border-top: 2px solid rgb(158, 62, 62);color:rgb(158, 62, 62);margin-top:30px;padding:10px;font-size:20px");
-
+            isCorrect.setAttribute("style", "border-top: 2px solid rgb(158, 62, 62);color:rgb(158, 62, 62);margin-top:0px;padding:10px;font-size:20px");
+            isCorrect.setAttribute("data-set","isCorrect");
             isCorrect.textContent = "Wrong !";
             count = count - 10;
         }
