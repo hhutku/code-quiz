@@ -1,4 +1,5 @@
 var header = document.querySelector(".header");
+var highestScore = document.querySelector(".highScores");
 var instruction = document.querySelector(".instruction");
 var startButton = document.querySelector(".sButton");
 var questionChoice = document.querySelector(".question-choice");
@@ -8,6 +9,9 @@ var displayTime = document.querySelector(".displayTime");
 var body=document.querySelector("body");
 var listener=document.querySelector(".listener");
 var containerHighScores=document.querySelector(".containerHighScores");
+
+// if(localStorage.getItem("highestScore")){
+//   highestScore.textContent="High Score : " +localStorage.getItem("highestScore");}
 
 var nextQ = 0;
 var timer;
@@ -284,7 +288,7 @@ function scoreDisplay(){
     var list=document.createElement('ul');
     containerHighScores.appendChild(list);
     list.append("High Scores");
-    list.setAttribute("style","margin-left:450px;color:rgb(158, 62, 62);font-size:40px;")
+    list.setAttribute("style","margin-left:450px;color:rgb(158, 62, 62);font-size:40px;margin-bottom:40px");
 
 
 
@@ -292,21 +296,27 @@ function scoreDisplay(){
        
    
 
-    var dispScore;
-
+  
+    
  
     for(i=0;i<storedScores.length;i++){
-
-        dispScore=storedScores[i].name+" :"+ storedScores[i].score;
-       
+if(i<5){
+    
+    console.log(storedScores[i].name);
+    console.log(storedScores[i].score);
         var li=document.createElement('li');
-        list.insertAdjacentElement('afterend', li);
-        li.setAttribute("style"," color:rgb(158, 62, 62);margin-top:10px;font-size:20px;margin-left:500px")
-         li.textContent=dispScore;
+        list.insertAdjacentElement('beforeend', li);
+        li.setAttribute("style"," color:rgb(158, 62, 62);margin-top:10px;font-size:20px;margin-left:40px")
+         li.textContent=storedScores[i].name+" :"+ storedScores[i].score;
+        
+         localStorage.setItem("highestScore",storedScores[0].score);
 
+         if(localStorage.getItem("highestScore")){
+            highestScore.textContent="High Score : " +localStorage.getItem("highestScore");}
+         
     }
 
-
+}
 }
 
 body.addEventListener("submit",function(e){
@@ -328,11 +338,15 @@ console.log(e);
       localStorage.setItem("highScores", JSON.stringify(storedScores));
 
     storedScores = JSON.parse(localStorage.getItem("highScores")); 
-   
+    storedScores.sort((a,b) => (a.score < b.score) ? 1: -1);
+
+    
     
     scoreDisplay();}
- 
+    
 })
+
+
 
 
 
