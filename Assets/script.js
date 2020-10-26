@@ -29,7 +29,7 @@ var point=0;
 
 var questions = [
     {
-        question: "Whic one is not a data type? ",
+        question: "Which one is not a data type? ",
         answers: ["strings", "booleans", "alerts", "numbers"],
         correctAnswer: "alerts"
     },
