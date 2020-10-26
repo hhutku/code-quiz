@@ -1,0 +1,78 @@
+body{
+    background-color:rgb(189, 169, 169);
+}
+.header{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+     border: 7px solid rgb(36, 8, 8);
+    background-color: rgb(158, 62, 62);
+}
+.header h1{
+    padding: 5px;
+    font-size: 50px;
+    color:rgb(56, 10, 10);
+    text-align: center;
+}
+
+.instruction{
+
+    width: 50%;
+    margin:50px auto;
+    color:rgb(158, 62, 62);
+    font-size: 25px;
+    font-weight: 600;
+}
+.startButton{
+    width: 50%;
+    margin:20px auto;
+    
+}
+
+.sButton{
+     color:rgb(56, 10, 10);
+    border: none;
+    background-color: rgb(158, 62, 62);
+    border: 3px solid rgb(36, 8, 8);
+    padding: 15px 32px;
+    text-align: center;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    font-size: 22px;
+    font-weight: 800;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+ .question-choice{
+      width:50%;
+      margin:auto;
+      margin-top:80px;
+      
+  }
+.question{
+
+    height: 70px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 5px;
+    /* background-color: rgb(196, 110, 110); */
+    color: rgb(65, 26, 26);
+    font-size: 40px;
+    /* line-height: 1.5;
+    list-style-type: none; */
+    display:none;
+}
+
+.choices{
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+     padding: 5px; 
+    background-color: rgb(190, 138, 138);
+    color: rgb(65, 26, 26);
+    font-size: 40px;
+    display:none;
+    cursor: pointer;
+
+}
