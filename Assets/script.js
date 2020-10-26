@@ -198,7 +198,7 @@ var chooseAnswer = function (e) {
 
     if (questions.length == nextQ ) {
 
-        setTimeout( callbackFunction, 2000 );
+        setTimeout( callbackFunction, 1300 );
         function callbackFunction(){
         
         clearTimeout(timer);
