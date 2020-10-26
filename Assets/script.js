@@ -85,9 +85,10 @@ var startQuiz = function () {
         count--;
 
         displayTime.textContent = count;
-        if(count<=0){
+        if( count==0){
             clearTimeout(timer);
             score=count;
+            questionChoice.setAttribute("style","display:none");
             highScores();
         }
 
@@ -118,8 +119,7 @@ var startQuiz = function () {
 var isCorrect;
 var chooseAnswer = function (e) {
 
-    console.log(e);
-    console.log(e.target.dataset);
+  
 
     if( (e.target.innerText!="Wrong !" && e.target.innerText!="Correct !" && e.target.className!="question"))
     // if( (e.target.dataset!="isCorrect" && e.target.className!="question"))
@@ -207,14 +207,15 @@ var chooseAnswer = function (e) {
     }
        
 
-    if (questions.length == nextQ ) {
+    if ( questions.length == nextQ ) {
 
-        setTimeout( callbackFunction, 1300 );
+        setTimeout( callbackFunction, 900 );
         function callbackFunction(){
         
         clearTimeout(timer);
         
         score=count;
+        questionChoice.setAttribute("style","display:none");
         highScores(); }
     }
     nextQ++;
@@ -260,7 +261,7 @@ function displayGobackAndClearScore(){
     
 
          localStorage.clear();
-        console.log("hghghgh");
+       
           
         containerHighScores.setAttribute("style","display:none");
        
@@ -309,7 +310,8 @@ function scoreDisplay(){
 
 body.addEventListener("submit",function(e){
     e.preventDefault();
-
+    console.log("eventtttt");
+console.log(e);
 
     if(e.target.nodeName=="FORM"){
    
