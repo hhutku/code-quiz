@@ -21,6 +21,7 @@ var storedScores;
 var highScores;
 var clearHighScoresbuton;
 var scoresTable;
+var point=0;
 
 
 
@@ -87,7 +88,7 @@ var startQuiz = function () {
         displayTime.textContent = count;
         if( count==0){
             clearTimeout(timer);
-            score=count;
+            score=point;
             questionChoice.setAttribute("style","display:none");
             highScores();
         }
@@ -142,7 +143,7 @@ var chooseAnswer = function (e) {
             isCorrect.setAttribute("style", "border-top: 2px solid rgb(158, 62, 62);color:rgb(158, 62, 62);margin-top:0px;padding:10px;font-size:20px");
             isCorrect.textContent = "Correct !";
             isCorrect.setAttribute("data-set","isCorrect");
-           
+           point=point+10;
 
         } else {
             isCorrect = document.createElement('div');
@@ -214,7 +215,7 @@ var chooseAnswer = function (e) {
         
         clearTimeout(timer);
         
-        score=count;
+        score=point;
         questionChoice.setAttribute("style","display:none");
         highScores(); }
     }
