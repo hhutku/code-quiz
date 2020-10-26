@@ -29,7 +29,7 @@ var point=0;
 
 var questions = [
     {
-        question: "Commonly used data types DO NOT include:",
+        question: "Whic one is not a data type? ",
         answers: ["strings", "booleans", "alerts", "numbers"],
         correctAnswer: "alerts"
     },
@@ -39,12 +39,12 @@ var questions = [
         correctAnswer: "script"
     },
     {
-        question: "What are programs you use?",
-        answers: ["java", "html", "css", "jquery"],
-        correctAnswer: "java"
+        question: "Who is the best developper?",
+        answers: ["Jeff", "Bill", "Joe", "Anthony"],
+        correctAnswer: "Anthony"
     },
     {
-        question: "How do you write 'Hello World' in an alert box?",
+        question: "We write 'Hello World' in an alert box using _____..",
         answers: ["alertBox", "alert", "message", "print"],
         correctAnswer: "alert"
     },
@@ -54,7 +54,7 @@ var questions = [
         correctAnswer: "parentheses"
     },
     {
-        question: "What are programs you use",
+        question: "_______ is a scripting or programming language.",
         answers: ["javascript", "html", "css", "jquery"],
         correctAnswer: "javascript"
     },
