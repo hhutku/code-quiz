@@ -90,7 +90,7 @@ var startQuiz = function () {
         count--;
 
         displayTime.textContent = count;
-        if( count==0){
+        if( count<=0){
             clearTimeout(timer);
             score=point;
             questionChoice.setAttribute("style","display:none");
@@ -256,8 +256,11 @@ function displayGobackAndClearScore(){
    goBack.addEventListener("click", function(e){
     e.preventDefault();
        
-        window.location.href = "https://hhutku.github.io/code-quiz/";
-   
+    
+       window.location.href = "https://hhutku.github.io/code-quiz/";
+ 
+
+
    });
 
 
