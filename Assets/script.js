@@ -22,7 +22,7 @@ var input;
 var allDone;
 var  submitingScore;
 var storedScores;
-var highScores;
+
 var clearHighScoresbuton;
 var scoresTable;
 var point=0;
@@ -94,7 +94,7 @@ var startQuiz = function () {
             clearTimeout(timer);
             score=point;
             questionChoice.setAttribute("style","display:none");
-            highScores();
+            resultShow();
         }
 
     }, 1000);
@@ -155,7 +155,11 @@ var chooseAnswer = function (e) {
             isCorrect.setAttribute("style", "border-top: 2px solid rgb(158, 62, 62);color:rgb(158, 62, 62);margin-top:0px;padding:10px;font-size:20px");
             isCorrect.setAttribute("data-set","isCorrect");
             isCorrect.textContent = "Wrong !";
-            count = count - 10;
+            count -= 10;
+            if (count < 0) {
+                count = 1;
+
+            }
         }
 
     }
@@ -172,7 +176,7 @@ var chooseAnswer = function (e) {
 
     }
 
-      highScores=function(){
+      resultShow=function(){
 
         questionChoice.setAttribute("style","display:none")
 
@@ -214,14 +218,14 @@ var chooseAnswer = function (e) {
 
     if ( questions.length == nextQ ) {
 
-        setTimeout( callbackFunction, 900 );
+        setTimeout( callbackFunction, 1500 );
         function callbackFunction(){
         
         clearTimeout(timer);
         
         score=point;
         questionChoice.setAttribute("style","display:none");
-        highScores(); }
+        resultShow(); }
     }
     nextQ++;
 
@@ -297,10 +301,7 @@ function scoreDisplay(){
 
      displayGobackAndClearScore();
        
-   
-
-  
-    
+      
  
     for(i=0;i<storedScores.length;i++){
 if(i<5){
