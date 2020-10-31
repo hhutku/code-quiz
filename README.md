@@ -1,6 +1,6 @@
 # Code-Quiz
 
--Proporties of Code Quiz
+- Proporties of Code Quiz
 
 - GIVEN I am taking a code quiz
 - WHEN I click the start button
@@ -17,11 +17,11 @@
 ## Link For the app.
 https://hhutku.github.io/code-quiz/
 
-![Code-Quiz Screen Shot1](https://github.com/hhutku/pass-gen/blob/main/Assets/images/quiz1.png)
-![Code-Quiz Screen Shot2](https://github.com/hhutku/pass-gen/blob/main/Assets/images/quiz2.png)
-![Code-Quiz Screen Shot3](https://github.com/hhutku/pass-gen/blob/main/Assets/images/quiz3.png)
-![Code-Quiz Screen Shot4](https://github.com/hhutku/pass-gen/blob/main/Assets/images/quiz4.png)
-![Code-Quiz Screen Shot5](https://github.com/hhutku/pass-gen/blob/main/Assets/images/quiz5.png)
+![Code-Quiz Screen Shot1](https://github.com/hhutku/pass-gen/blob/main/Assets/screenShots/quiz1.png)
+![Code-Quiz Screen Shot2](https://github.com/hhutku/pass-gen/blob/main/Assets/screenShots/quiz2.png)
+![Code-Quiz Screen Shot3](https://github.com/hhutku/pass-gen/blob/main/Assets/screenShots/quiz3.png)
+![Code-Quiz Screen Shot4](https://github.com/hhutku/pass-gen/blob/main/Assets/screenShots/quiz4.png)
+![Code-Quiz Screen Shot5](https://github.com/hhutku/pass-gen/blob/main/Assets/screenShots/quiz5.png)
 
 
 
